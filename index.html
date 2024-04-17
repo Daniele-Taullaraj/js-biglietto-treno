@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biglietto Treno</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        const chilometri = prompt("Quanti chilometri?");
+        const età = prompt("Quanti anni hai?");
+        const costoKM = 0.21;
+
+        let totale = chilometri * costoKM; 100;
+
+        const sconto_20 = (totale / 100) * 20;
+        const sconto_40 = (totale / 100) * 40;
+
+
+
+        if (età < 18) {
+            totale = totale - sconto_20;
+        }
+        else if (età > 65) {
+            totale = totale - sconto_40;
+        }
+
+        console.log('Il costo del biglietto è : ' + totale + '€100');
+
+
+    </script>
+
+</body>
+
+</html>
