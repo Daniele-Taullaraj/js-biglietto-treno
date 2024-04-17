@@ -11,25 +11,35 @@
     <script type="text/javascript">
 
         const chilometri = prompt("Quanti chilometri?");
-        const età = prompt("Quanti anni hai?");
         const costoKM = 0.21;
 
-        let totale = chilometri * costoKM; 100;
+
+        let totale = chilometri * costoKM;
+        totale = totale.toFixed(2);
+
+        console.log('Il costo del biglietto è : ' + totale + '€');
+
+        const età = prompt("Quanti anni hai?");
 
         const sconto_20 = (totale / 100) * 20;
         const sconto_40 = (totale / 100) * 40;
 
 
-
         if (età < 18) {
             totale = totale - sconto_20;
+            totale = totale.toFixed(2);
+            console.log('Hai diritto ad uno sconto, il costo del biglietto è : ' + totale + '€');
+
         }
         else if (età > 65) {
             totale = totale - sconto_40;
+            totale = totale.toFixed(2);
+            console.log('Hai diritto ad uno sconto, il costo del biglietto è : ' + totale + '€');
         }
 
-        console.log('Il costo del biglietto è : ' + totale + '€100');
 
+        // BONUS
+        document.write('Il costo del biglietto è : ' + totale + '€');
 
     </script>
 
